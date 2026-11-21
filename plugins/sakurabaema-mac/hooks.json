@@ -1,0 +1,23 @@
+{
+  "notification-sakurabaema-mac": {
+    "PreToolUse": [
+      {
+        "matcher": "ask_question",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay \"./audios/notification.wav\" >/dev/null 2>&1 & echo '{\"decision\":\"allow\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "afplay \"./audios/stop.wav\" >/dev/null 2>&1 & echo '{}'",
+        "timeout": 5
+      }
+    ]
+  }
+}

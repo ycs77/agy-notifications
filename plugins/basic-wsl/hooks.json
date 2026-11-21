@@ -1,0 +1,23 @@
+{
+  "notification-basic-wsl": {
+    "PreToolUse": [
+      {
+        "matcher": "ask_question",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "paplay \"./audios/notification.wav\" >/dev/null 2>&1 & echo '{\"decision\":\"allow\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "paplay \"./audios/stop.wav\" >/dev/null 2>&1 & echo '{}'",
+        "timeout": 5
+      }
+    ]
+  }
+}

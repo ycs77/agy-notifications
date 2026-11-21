@@ -1,0 +1,23 @@
+{
+  "notification-basic-linux": {
+    "PreToolUse": [
+      {
+        "matcher": "ask_question",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "aplay \"./audios/notification.wav\" >/dev/null 2>&1 & echo '{\"decision\":\"allow\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "aplay \"./audios/stop.wav\" >/dev/null 2>&1 & echo '{}'",
+        "timeout": 5
+      }
+    ]
+  }
+}

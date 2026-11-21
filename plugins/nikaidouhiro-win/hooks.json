@@ -1,0 +1,23 @@
+{
+  "notification-nikaidouhiro-win": {
+    "PreToolUse": [
+      {
+        "matcher": "ask_question",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -Command \"[System.Media.SoundPlayer]::new((Resolve-Path -LiteralPath './audios/notification.wav').ProviderPath).PlaySync()\" >nul 2>&1 & echo {\"decision\":\"allow\"}",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "powershell.exe -NoProfile -Command \"[System.Media.SoundPlayer]::new((Resolve-Path -LiteralPath './audios/stop.wav').ProviderPath).PlaySync()\" >nul 2>&1 & echo {}",
+        "timeout": 5
+      }
+    ]
+  }
+}
