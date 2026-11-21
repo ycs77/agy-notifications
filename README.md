@@ -20,6 +20,13 @@
 agy plugin install https://github.com/ycs77/agy-notifications/tree/main/plugins/<plugin-dir>
 ```
 
+## 相關專案
+
+- [Claude Code 提示音合集](https://github.com/ycs77/claude-code-notifications)
+- [Codex 提示音合集](https://github.com/ycs77/codex-notifications)
+- [OMP 提示音合集](https://github.com/ycs77/omp-notifications)
+- [Antigravity 提示音合集](https://github.com/ycs77/agy-notifications)
+
 ## 作者
 
 Lucas Yang (yangchenshin77@gmail.com)
